@@ -1,0 +1,271 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Portfolio Mahasiswa</title>
+     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+        }
+
+        /* Navigasi */
+        nav {
+            background-color: #142b47;
+            padding: 12px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #80c4ff;
+        }
+
+        /* Konten utama */
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #1e3a5f;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #1e3a5f;
+            padding-bottom: 8px;
+        }
+
+        /* Daftar proyek */
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        article {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        article h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            margin-bottom: 12px;
+        }
+
+        .category {
+            display: inline-block;
+            background-color: #e1efff;
+            color: #1e3a5f;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        /* Tombol */
+        .button {
+            display: inline-block;
+            background-color: #1e3a5f;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #315b88;
+        }
+
+        /* Tentang proyek */
+        .about {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #142b47;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Tampilan HP */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Project Portfolio</h1>
+        <p>Kumpulan Proyek dan Karya Mahasiswa</p>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main>
+
+        <!-- Tentang -->
+        <section>
+            <h2>Tentang Proyek</h2>
+
+            <div class="about">
+                <p>
+                    Selamat datang di halaman portofolio proyek saya.
+                    Halaman ini berisi beberapa contoh proyek di bidang
+                    teknologi informasi yang dibuat untuk mengembangkan
+                    kemampuan pemrograman, desain, dan pengolahan data.
+                </p>
+            </div>
+        </section>
+
+        <!-- Daftar Proyek -->
+        <section id="project">
+            <h2>Daftar Proyek</h2>
+
+            <div class="project-container">
+
+                <article>
+                    <span class="category">Web Development</span>
+                    <h3>Website Portofolio</h3>
+                    <p>
+                        Website pribadi yang menampilkan profil,
+                        pengalaman, keterampilan, dan hasil karya
+                        menggunakan HTML dan CSS.
+                    </p>
+                    <a href="index.html" class="button">Lihat Proyek</a>
+                </article>
+
+                <article>
+                    <span class="category">Database</span>
+                    <h3>Sistem Informasi Laundry</h3>
+                    <p>
+                        Aplikasi sederhana untuk membantu pencatatan
+                        data pelanggan, transaksi laundry, dan status
+                        pesanan secara terstruktur.
+                    </p>
+                    <a href="#" class="button">Lihat Proyek</a>
+                </article>
+
+                <article>
+                    <span class="category">UI/UX Design</span>
+                    <h3>Desain Aplikasi Mobile</h3>
+                    <p>
+                        Rancangan antarmuka aplikasi mobile yang dibuat
+                        dengan memperhatikan kenyamanan pengguna,
+                        konsistensi desain, dan kemudahan navigasi.
+                    </p>
+                    <a href="#" class="button">Lihat Proyek</a>
+                </article>
+
+                <article>
+                    <span class="category">Data Processing</span>
+                    <h3>Pengolahan Data Mahasiswa</h3>
+                    <p>
+                        Proyek pengolahan data mahasiswa untuk
+                        mengelola informasi akademik, melakukan
+                        pencarian data, dan menyajikan informasi
+                        secara sistematis.
+                    </p>
+                    <a href="#" class="button">Lihat Proyek</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Tujuan -->
+        <section>
+            <h2>Tujuan Pengembangan</h2>
+
+            <div class="about">
+                <p>
+                    Setiap proyek dikembangkan sebagai sarana belajar
+                    untuk meningkatkan kemampuan berpikir logis,
+                    menyelesaikan masalah, memahami kebutuhan pengguna,
+                    dan menerapkan teknologi dalam kehidupan sehari-hari.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Project Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```

@@ -1,0 +1,338 @@
+
+/* ========================================
+   PALLETE COLOR
+   Canary Yellow : #F4C542
+   Broken White  : #FAF7F0
+   Coffee Brown  : #5A3825
+   ======================================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF7F0;
+    color: #5A3825;
+    line-height: 1.7;
+}
+
+/* ========================================
+   RESUME
+   ======================================== */
+
+.container {
+    max-width: 950px;
+    margin: 45px auto;
+    padding: 45px;
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    border-top: 10px solid #F4C542;
+    box-shadow: 0 8px 30px rgba(90, 56, 37, 0.10);
+}
+
+/* Judul Utama */
+.container > h1 {
+    display: inline-block;
+    background-color: #F4C542;
+    color: #5A3825;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+/* Identitas */
+.identitas {
+    background-color: #FAF7F0;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 6px solid #F4C542;
+    border-radius: 8px;
+}
+
+.identitas h2 {
+    color: #5A3825;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.identitas p {
+    overflow-wrap: anywhere;
+}
+
+/* Judul Bagian */
+.container > h2 {
+    color: #5A3825;
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #F4C542;
+}
+
+/* Paragraf */
+.container > p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Daftar Pendidikan dan Keahlian */
+.container ul {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.container li {
+    padding: 5px 0;
+    padding-left: 5px;
+}
+
+.container li::marker {
+    color: #D6A719;
+}
+
+/* Pengalaman Kerja */
+.container li strong {
+    display: inline-block;
+    color: #5A3825;
+    margin-bottom: 8px;
+}
+
+/* Penekanan Teks */
+.container strong {
+    font-weight: 700;
+}
+
+/* Bagian Kontak */
+.container > h2:last-of-type {
+    margin-top: 35px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+body > header {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-bottom: 3px solid #F4C542;
+}
+
+body > header h1 {
+    max-width: 900px;
+    margin: auto;
+    color: #5A3825;
+}
+
+/* ========================================
+   NAVIGASI
+   ======================================== */
+
+nav {
+    max-width: 900px;
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: #5A3825;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #C18B00;
+}
+
+/* ========================================
+   MAIN DAN SECTION
+   ======================================== */
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+/* ========================================
+   PROJECT
+   ======================================== */
+
+#project {
+    margin-top: 30px;
+}
+
+article {
+    padding: 15px 0;
+    border-bottom: 1px solid #E8DFD1;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+/* ========================================
+   FORM
+   ======================================== */
+
+form {
+    margin-top: 20px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D8C8B5;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #FAF7F0;
+    color: #5A3825;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5A3825;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button[type="reset"] {
+    background-color: #B7A99A;
+    color: #333333;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* ========================================
+   ASIDE
+   ======================================== */
+
+aside {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-left: 5px solid #F4C542;
+    border-radius: 5px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #FAF7F0;
+    background-color: #5A3825;
+    font-size: 14px;
+}
+
+/* GARIS HR */
+hr {
+    display: none;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 700px) {
+    .container {
+        margin: 20px 12px;
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    .container > h1 {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .identitas {
+        padding: 18px;
+    }
+
+    .identitas h2 {
+        font-size: 21px;
+    }
+
+    .container > h2 {
+        font-size: 19px;
+    }
+
+    .container > p {
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    aside {
+        margin: 20px 12px;
+    }
+}
