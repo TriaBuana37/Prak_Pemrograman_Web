@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Portofolio Proyek - Modul 4</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+        }
+
+        body {
+            background-color: #F5F0E6;
+            color: #4B3621;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #FFFCF5;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px -1px rgba(75, 54, 33, 0.1);
+        }
+
+        h1 {
+            color: #6F4E37;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        p.subtitle {
+            color: #8C7865;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: #F8F3E8;
+            border: 1px solid #E6D8C3;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 13px;
+            color: #8C7865;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #6F4E37;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-filter {
+            padding: 8px 16px;
+            border: 1px solid #D6C3A5;
+            background: #FFFCF5;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-filter.active,
+        .btn-filter:hover {
+            background: #E6B93D;
+            color: #4B3621;
+            border-color: #D4A72C;
+        }
+
+        .project-card {
+            border: 1px solid #E6D8C3;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #FFFCF5;
+            transition: transform 0.15s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(75, 54, 33, 0.05);
+        }
+
+        .project-info h4 {
+            font-size: 16px;
+            color: #4B3621;
+            margin-bottom: 4px;
+        }
+
+        .project-category {
+            display: inline-block;
+            font-size: 12px;
+            color: #6F4E37;
+            background: #F3E5C8;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .project-budget {
+            font-size: 14px;
+            color: #6F4E37;
+            font-weight: 600;
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background: #E8D8A8;
+            color: #5B4615;
+        }
+
+        .badge-pending {
+            background: #F5E2A9;
+            color: #795B16;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Portofolio Proyek</h1>
+
+        <p class="subtitle">
+            Modul 4: Pengolahan Logika Data & Interaktivitas DOM
+        </p>
+
+        <!-- Kartu Ringkasan Statistik -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Proyek</h3>
+                <p id="stat-total-projects">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Anggaran</h3>
+                <p id="stat-total-budget">Rp 0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Selesai Dikerjakan</h3>
+                <p id="stat-completed-projects">0</p>
+            </div>
+        </div>
+
+        <!-- Tombol Filter Kategori -->
+        <div class="filter-group">
+            <button class="btn-filter active" data-category="Semua">
+                Semua Proyek
+            </button>
+
+            <button class="btn-filter" data-category="Web App">
+                Web App
+            </button>
+
+            <button class="btn-filter" data-category="Desktop App">
+                Desktop App
+            </button>
+
+            <button class="btn-filter" data-category="Mobile App">
+                Mobile App
+            </button>
+        </div>
+
+        <!-- Kontainer Daftar Proyek -->
+        <div id="project-list"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
